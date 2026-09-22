@@ -13,3 +13,5 @@ scored.csv
 .mypy_cache/
 .coverage
 htmlcov/
+.DS_Store
+**/.DS_Store
