@@ -15,7 +15,7 @@ concurrency:
 
 env:
   PYTHON_VERSION: "3.12"
-  IMAGE: ghcr.io/${{ github.repository }}
+  IMAGE: ghcr.io/renad11omar/fraud-service
 
 jobs:
   lint:
