@@ -35,12 +35,21 @@ $ pytest -m slow
 3 passed in ~6s (behavioural suite, real model, golden file)
 ```
 
-## What you build today (Lab 5)
+## Lab 5 implementation
+
+This starter has been completed for Lab 5 in the repository:
 
 ```
-.github/workflows/ci.yml   # TODO — lint, test, image-smoke, publish jobs
-pyproject.toml               # extend — [tool.importlinter] architecture contract
+.github/workflows/ci.yml   # lint, test, image-smoke, publish
+payloads/sample.json       # valid smoke-test payload
+pyproject.toml             # import-linter clean-architecture contract
 ```
+
+The remaining Lab 5 actions are GitHub-side because they require the actual
+repository and its Actions/Packages state: run the workflow on GitHub, record
+the cold/warm timings, publish the SHA-tagged image to GHCR, configure branch
+protection on `main`, and create/fix the deliberate `bad-pr` to prove the gate.
+Use `LAB5_GITHUB_CHECKLIST.md` for the exact verification sequence.
 
 Plus a **GitHub-side task**: this lab needs your fraud-service repository
 actually pushed to GitHub with Actions enabled — CI cannot run against a
